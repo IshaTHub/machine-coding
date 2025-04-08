@@ -6,3 +6,11 @@
     padding: 5px;
     border: 1px solid black;
 }
+
+.tab-body{
+    display: flex;
+    border: 2px solid black;
+    height: 500px;
+    width: 450px;
+    padding: 5px;
+}
