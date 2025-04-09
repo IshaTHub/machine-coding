@@ -5,7 +5,18 @@ import Interest from "./Interest";
 import "../style.css";
 import { useState } from "react";
 export default function TabForm() {
+  
   const [activeTab, setActiveTab] = useState(0);
+
+
+  //for data persistance we are keeping our data in centralised manner
+  const [data,setData] = useState({   
+    name: "riya",
+    age: 24,
+    interests: ["reading", "coding"],
+    theme: 'dark',
+    email: 'riya@gmail.com'
+  });
 
   const tabs = [
     //config driven ui
@@ -36,7 +47,7 @@ export default function TabForm() {
         ))}
       </div>
       <div className="tab-body">
-        <ActiveTabComponent />
+        <ActiveTabComponent data={data} setData={setData} />   {/*passing data through props */}
       </div>
     </div>
   );
